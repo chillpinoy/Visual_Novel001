@@ -2,8 +2,6 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 96: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    $ quiz_score = 0
-    ^
+File "game/script.rpy", line 123: indentation mismatch.
 
 Ren'Py Version: Ren'Py 6.99.13.2919

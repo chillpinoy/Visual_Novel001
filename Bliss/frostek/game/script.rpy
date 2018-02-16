@@ -107,6 +107,49 @@ label cave:
         "this is the right answer":
             "Next Question"
             $ quiz_score +=1
+    
+    
+    #2nd question
+    menu:
+        "This is incorrect":
+            "Next Question"
+        "This is incorrect":
+            "Next Question"
+        "this is the right answer":
+            "Next Question"
+            $ quiz_score +=1
+            
+    #question 3
+    menu:
+        "This is incorrect":
+            "Next Question"
+        "This is incorrect":
+            "Next Question"
+        "this is the right answer":
+            "Next Question"
+            $ quiz_score +=1
+            
+     #question 4
+    menu:
+        "This is incorrect":
+            "Next Question"
+        "This is incorrect":
+            "Next Question"
+        "this is the right answer":
+            "Next Question"
+            $ quiz_score +=1
+            
+    
+     #question 5
+    menu:
+        "This is incorrect":
+            "Test Complete"
+        "This is incorrect":
+            "Test Complete"
+        "this is the right answer":
+            "Test Complete"
+            $ quiz_score +=1
+            
             
     "You got a quiz score of [quiz_score]"
     "The END"

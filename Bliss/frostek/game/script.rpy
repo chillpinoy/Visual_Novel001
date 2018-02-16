@@ -23,7 +23,7 @@ image main = Frame("menu.jpg", 10, 10)
 
 label start:
 
-    
+    play music "better.mp3"
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -91,6 +91,7 @@ label cave:
     "A crevice opens and a light shines upon you"
     "Looks like a riddle you must solve"
     e "Alright then, let's do this"
+    stop sound
     
     
     $ quiz_score = 0
@@ -150,8 +151,21 @@ label cave:
             "Test Complete"
             $ quiz_score +=1
             
-            
+    
     "You got a quiz score of [quiz_score]"
+    #This will check the quiz score if the user will pass through the next part
+    if quiz_score >= 3:
+        #user wins and passes through
+        "A door opens and you can now go through..."
+    else:
+        "The floor crumbles beneath you and you fall to your death in an abyss"
+        "You have died"
+        "*RESETTING TO NEAREST CHECKPOINT*"
+        
+    jump cave
+            
+            
+  
     "The END"
 
     # This ends the game.

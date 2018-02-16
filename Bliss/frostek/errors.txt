@@ -2,6 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 123: indentation mismatch.
+File "game/script.rpy", line 14: expected statement.
+    sound better.mp3
+                ^
+
+File "game/script.rpy", line 93: expected end of line
+    stop sound better.mp3
+               ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

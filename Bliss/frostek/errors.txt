@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 9: image name components may not begin with a '-'.
-    image land - "Island.jpg"
-               ^
+File "game/script.rpy", line 96: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    $ quiz_score = 0
+    ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

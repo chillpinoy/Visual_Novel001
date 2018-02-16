@@ -1,87 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'Island.jpg'>:
-  File "game/script.rpy", line 31, in script
-    "The sun hits your face, you blink, and you see a deep gaze of figure, but what is it"
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-IOError: Couldn't find file 'Island.jpg'.
+While running game code:
+  File "game/script.rpy", line 61, in script
+    pov "Where am I?is this an island"
+  File "renpy/common/00library.rpy", line 253, in say
+    who(what, interact=interact, *args, **kwargs)
+KeyError: u'povname'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 31, in script
-    "The sun hits your face, you blink, and you see a deep gaze of figure, but what is it"
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\ast.py", line 590, in execute
-    statement_name("say")
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\ast.py", line 43, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\exports.py", line 1406, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\core.py", line 2123, in do_with
-    clear=clear)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\core.py", line 2916, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\core.py", line 1980, in draw_screen
-    renpy.config.screen_height,
-  File "renpy/display/render.pyx", line 430, in renpy.display.render.render_screen (gen\renpy.display.render.c:6938)
-    rv = render(root, width, height, 0, 0)
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen\renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen\renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen\renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\transition.py", line 360, in render
-    bottom = render(self.old_widget, width, height, st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen\renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen\renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen\renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen\renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen\renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen\renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "renpy/display/accelerator.pyx", line 108, in renpy.display.accelerator.transform_render (gen\renpy.display.accelerator.c:2047)
-    cr = render(child, widtho, heighto, st - self.child_st_base, at)
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen\renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\image.py", line 392, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\image.py", line 213, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen\renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen\renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\im.py", line 503, in render
-    texture = cache.get(self, texture=True)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\im.py", line 212, in get
-    surf = image.load()
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\display\im.py", line 553, in load
-    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
-  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\loader.py", line 548, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'Island.jpg'.
+  File "game/script.rpy", line 61, in script
+    pov "Where am I?is this an island"
+  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\ast.py", line 624, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\exports.py", line 1171, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "renpy/common/00library.rpy", line 253, in say
+    who(what, interact=interact, *args, **kwargs)
+  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\character.py", line 889, in __call__
+    who = who_pattern.replace("[who]", sub(who))
+  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\character.py", line 884, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\Erron\Desktop\3sw\renpy-6.99.13-sdk\renpy\substitutions.py", line 242, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
+KeyError: u'povname'
 
 Windows-8-6.2.9200
 Ren'Py 6.99.13.2919
-frostek 1.0
+ 1.0
